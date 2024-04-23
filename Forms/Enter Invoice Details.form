@@ -1,0 +1,146 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.4.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "2c1d55f"
+  },
+  "schemaVersion": 16,
+  "id": "Form_0xnu43q",
+  "components": [
+    {
+      "text": "### Invoice Details",
+      "type": "text",
+      "id": "Heading_0",
+      "layout": {
+        "row": "row_0",
+        "columns": null
+      }
+    },
+    {
+      "label": "Speedy Processing",
+      "type": "checkbox",
+      "layout": {
+        "row": "row_0",
+        "columns": null
+      },
+      "id": "Field_17p6drq",
+      "key": "doItFaster"
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_1",
+      "label": "Invoice Number",
+      "validate": {
+        "minLength": 1,
+        "maxLength": 10,
+        "required": true
+      },
+      "key": "invoiceNumber",
+      "layout": {
+        "row": "row_1",
+        "columns": null
+      }
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Invoice Due Date",
+      "type": "datetime",
+      "id": "Date_2",
+      "validate": {
+        "required": true
+      },
+      "key": "invoiceDate",
+      "layout": {
+        "row": "row_1",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Vendor Information",
+      "type": "text",
+      "id": "Subheading_4",
+      "layout": {
+        "row": "row_2",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_5",
+      "label": "Vendor Name",
+      "validate": {
+        "minLength": 1,
+        "maxLength": 100,
+        "required": true
+      },
+      "key": "vendorName",
+      "layout": {
+        "row": "row_3",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_6",
+      "label": "Vendor Address",
+      "validate": {
+        "minLength": 1,
+        "maxLength": 150,
+        "required": true
+      },
+      "key": "vendorAddress",
+      "layout": {
+        "row": "row_3",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Line Items",
+      "type": "text",
+      "id": "Subheading_8",
+      "layout": {
+        "row": "row_4",
+        "columns": null
+      }
+    },
+    {
+      "components": [
+        {
+          "label": "Item Name",
+          "type": "textfield",
+          "layout": {
+            "row": "Row_106bivj",
+            "columns": null
+          },
+          "id": "Field_0g4z1gs",
+          "key": "itemName"
+        },
+        {
+          "label": "Price",
+          "type": "number",
+          "layout": {
+            "row": "Row_106bivj",
+            "columns": null
+          },
+          "id": "Field_0f38s6k",
+          "key": "itemPrice"
+        }
+      ],
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "label": "Items List",
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_00crikc",
+        "columns": null
+      },
+      "id": "Field_16hcgbu",
+      "path": "invoiceItems"
+    }
+  ],
+  "generated": true,
+  "type": "default"
+}
